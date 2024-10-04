@@ -12,6 +12,7 @@
         height: 100%;
         margin: auto;
 
+        
 
         .textContainer {
             height: 100%;
@@ -47,23 +48,28 @@
 
                 }
 
-               
+
             }
+
+            
         }
     }
-
     .imageContainer {
         height: 100%;
         position: absolute;
         top: 0;
         right: 0;
     }
-
+    
     .slidingText {
         position: absolute;
-        color:white;
+        bottom:0;
+        color: #ffffff20;
         font-size: 50vh;
-        color: white;
+        white-space: nowrap;
+        width:50%;
+        font-weight: bold;
     }
+    
 
 }

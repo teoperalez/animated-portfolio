@@ -1,25 +1,70 @@
 import "./hero.scss"
 import { motion } from "framer-motion"
 
+const textVariants = {
+    initial: {
+        x: -500,
+        opacity:0,
+    },
+    animate: {
+        x:0,
+        opacity:1,
+        transition: {
+            duration: 1,
+            staggerChildren: 0.1,
+        }
+    },
+    scrollButton: {
+        opacity: 0.3,
+        y:10,
+        transition: {
+            duration:2,
+            repeat:Infinity,
+            repeatType: "mirror",
+        },
+    }
+}
+
+const sliderVariants = {
+    initial: {
+        x: 0,
+   },
+    animate: {
+        x:"-1200%",
+        transition: {
+            duration: 60,
+            repeatType:"mirror",
+            repeat:Infinity,
+        }
+    },
+}
+
+
+
 const Hero = () => {
     return (
         <div className="hero">
+            <motion.div className="slidingText" variants={sliderVariants} initial="initial" animate="animate">
+                Content Creator - Frontend Developer - Musician - Investor
+            </motion.div>
             <div className="wrapper">
-                <div className="textContainer">
-                    <h2>Teo Peralez</h2>
-                    <h1>Web Developer and UI designer</h1>
-                    <div className="buttonContainer">
-                        <button>Latest Work</button>
-                        <button>Contact Me</button>
-                    </div>
-                    <img src="/scroll.png" />
-                </div>
-                <div className="imageContainer">
-                    <img src="/hero.png" />
-                </div>
-                <div className="slidingText">
-                    Content Creator - Frontend Developer - Musician - Investor 
-                </div>
+
+                <motion.div className="textContainer" variants={textVariants} initial="initial" animate="animate">
+                    <motion.h2 variants={textVariants}>Teo Peralez</motion.h2>
+                    <motion.h1 variants={textVariants}>Web Developer and UI designer</motion.h1>
+                    <motion.div className="buttonContainer" variants={textVariants}>
+                        <motion.button variants={textVariants}>Latest Work</motion.button>
+                        <motion.button variants={textVariants}>Contact Me</motion.button>
+                    </motion.div>
+                    <motion.img variants={textVariants} animate="scrollButton" src="/scroll.png" />
+                </motion.div>
+
+
+
+            </div>
+
+            <div className="imageContainer">
+                <img src="/hero.png" />
             </div>
         </div>
     )
