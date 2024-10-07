@@ -17,7 +17,7 @@ const Navbar = () => {
                     <img src="/logo.webp" />
                 </motion.span>
                 <div className="social">
-                    <a target="_blank" href="#"><img src="/youtube.png" alt="youtube"/></a>
+                    <a target="_blank" href="https://www.youtube.com/@RBYPokemonChallenges"><img src="/youtube.png" alt="youtube"/></a>
                 </div>
             </div>
         </div>
