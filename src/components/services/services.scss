@@ -1,0 +1,152 @@
+.services {
+    background: linear-gradient(180deg, #0c0c1d, #111132);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: clip;
+    align-items: center;
+    justify-content: space-between;
+
+
+    .textContainer {
+        flex: 1;
+        align-self: flex-end;
+        padding-right: 10px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        p {
+            font-size: 20px;
+            font-weight: 200;
+            color: grey;
+            text-align: right;
+        }
+
+    }
+
+    .titleContainer {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+
+        .title {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+
+            img {
+                border-radius: 50px;
+                width: 300px;
+                height: 100px;
+                object-fit: cover;
+
+
+
+            }
+
+            h1 {
+                font-size: 96px;
+                font-weight: 100;
+            }
+
+            button {
+                height: 100px;
+                width: 300px;
+                border-radius: 50px;
+                background-color: orange;
+                color: black;
+                font-weight: bold;
+                font-size: 24px;
+                border: none;
+                cursor: pointer;
+                transition: all 0.5s;
+            }
+
+            button:hover {
+               
+                background-color: darkorange;
+                border: solid white 3px;
+                color: white;
+
+
+            }
+        }
+
+    }
+
+    .listContainer {
+        flex: 2;
+        display: flex;
+        max-width: 1366px;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+
+        .card {
+            height: 100%;
+            width: 20%;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            border: 0.5px solid grey;
+            padding: 50px;
+            gap: 10px;
+            justify-content: space-between;
+                       
+            
+            .cardTitle {
+                font-size: 20px;
+                font-weight: 400;
+
+            }
+            .cardDescription {
+                line-break: 65ch;
+                font-size: 10px;
+            }
+
+            .cardButton {
+                background-color: orange;
+                padding: 10px;
+                border-radius: 15px;
+                color: #0c0c1d;
+                font-size: 16px;
+                transition: all 0.5s;
+                display: flex;
+                cursor: pointer;
+                justify-content: center;
+
+                span {
+                    opacity: 0.3;
+                    scale: 0.5;
+                    transform: translateX(-10px);
+                    transition: all 0.05s;
+                    
+                    
+                }
+
+                
+            }
+            .cardButton:hover {
+                color: white;
+                background-color: darkorange;
+                border: 0.5px solid white;
+                span {
+                    opacity: 1;
+                    scale: 1;
+                    transform: translateX(10px);
+                    font-weight: 900;
+                }
+            }
+            
+
+
+        }
+
+    }
+}
