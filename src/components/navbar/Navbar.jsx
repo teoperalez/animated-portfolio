@@ -5,8 +5,9 @@ import {motion} from "framer-motion"
 const Navbar = () => {
     return(
         <div className="navbar"> 
-           <Sidebar />
+           
             <div className="wrapper">
+            <Sidebar />
                 <motion.span 
                     initial={{opacity:0}}
                     animate={{opacity:1}}
