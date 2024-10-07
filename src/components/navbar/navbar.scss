@@ -1,5 +1,6 @@
 .navbar {
     height: 100px;
+    margin-bottom: 0px;
 
     .wrapper {
         height: 100%;
@@ -19,6 +20,7 @@
         .social {
             display: flex;
             gap: 20px;
+            padding-right: 50px;
 
             img {
                 width: 18px;
