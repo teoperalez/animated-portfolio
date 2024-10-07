@@ -25,13 +25,15 @@ const variants= {
 
 const sliderVariants = {
     initial: {
-        x: "-100%",
+        y: "0%",
+        scale:1
    },
     animate: {
-        x:"100%",
+        y:"10%",
+        scale: 1.1,
         transition: {
-            duration: 60,
-            repeatType:"loop",
+            duration: 10,
+            repeatType:"reverse",
             repeat:Infinity,
         }
     },
@@ -83,7 +85,7 @@ const Parallax = ({ type }) => {
                 ? <motion.div className="planets" style={{ y: yBg }} variants={variants}></motion.div>
                 : <motion.div className="sun" style={{ y: yBg }} variants={variants}></motion.div>
             }
-            <motion.div className="stars" style={{ x: yBg }} variants={variants}>
+            <motion.div className="stars" style={{ x: yBg }} variants={sliderVariants} initial="initial" animate="animate">
 
             </motion.div>
 

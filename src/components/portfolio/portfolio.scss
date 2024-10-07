@@ -1,0 +1,101 @@
+.portfolio {
+    position: relative;
+
+
+
+    .progress {
+
+        position: sticky;
+        top: 0;
+        left: 0;
+        padding: 50px;
+        text-align: center;
+        color: orange;
+        font-size: 36px;
+        z-index: 2;
+
+
+
+        .progressBar {
+            background-color: white;
+            height: 10px;
+
+        }
+
+    }
+
+    .container {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+
+        .wrapper {
+            max-width: 1366px;
+            height: 100%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            gap: 50px;
+
+
+
+
+            .imageContainer {
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 50%;
+                width: min-content;
+                
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 20px;
+                }
+                
+
+            }
+
+            .textContainer {
+                height: 100%;
+             
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 30px;
+
+                h2 {
+                    font-size: 30px;
+                }
+
+                p {
+                    color: grey;
+                }
+
+                a {
+                    padding: 10px;
+                    background-color: orange;
+                    border-radius: 10px;
+                    color: black;
+                    cursor: pointer;
+                    transition: all 0.5s;
+                }
+
+                a:hover {
+                    background-color: darkorange;
+                    color: white;
+                }
+
+            }
+        }
+    }
+}

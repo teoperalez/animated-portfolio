@@ -32,10 +32,10 @@ const Services = () => {
             <motion.div className="titleContainer" variants={variants}>
                 <motion.div className="title">
                     <motion.img src="/people.webp" />
-                    <motion.h1><b>Unique</b> Ideas</motion.h1>
+                    <motion.h1><motion.b whileHover={{color: "orange"}}>Unique</motion.b> Ideas</motion.h1>
                 </motion.div>
                 <motion.div className="title">
-                    <motion.h1><b>For Your</b> Business.</motion.h1>
+                    <motion.h1><motion.b whileHover={{color: "orange"}}>For Your</motion.b> Business.</motion.h1>
                     <motion.button>WHAT I DO</motion.button>
 
                 </motion.div>
