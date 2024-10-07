@@ -2,7 +2,45 @@ import "./parallax.scss"
 import { motion, useScroll, useTransform } from "framer-motion"
 import { useRef } from "react"
 
+const variants= {
+    initial: {
+        opacity:0,
+        y:-100,
+        scale: 1.1
+
+    },
+    animate: {
+        opacity:1,
+        y:0,
+        scale: 1,
+        transition: {
+            duration:1,
+            staggerChildren: 0.1
+        }
+
+    },
+    
+
+}
+
+const sliderVariants = {
+    initial: {
+        x: "-100%",
+   },
+    animate: {
+        x:"100%",
+        transition: {
+            duration: 60,
+            repeatType:"loop",
+            repeat:Infinity,
+        }
+    },
+}
+
 const Parallax = ({ type }) => {
+
+    
+    
     const ref = useRef();
     const { scrollYProgress } = useScroll({
         target: ref,
@@ -23,7 +61,7 @@ const Parallax = ({ type }) => {
 
 
     return (
-        <div
+        <motion.div
             className="parallaxContainer"
             style={{
                 background:
@@ -32,23 +70,24 @@ const Parallax = ({ type }) => {
                         : "linear-gradient(180deg, #111132, #505064"
             }}
             ref={ref}
+            variants={variants} initial="initial" whileInView="animate"
         >
-            <motion.h1 style={{ y: yText }}>
+            <motion.h1 style={{ y: yText }} variants={variants}>
                 {type === "services" ? "Services" : "Portfolio"}
             </motion.h1>
-            <motion.div className="mountains"
+            <motion.div className="mountains" variants={variants}
             >
 
             </motion.div>
             {type === "services"
-                ? <motion.div className="planets" style={{ y: yBg }}></motion.div>
-                : <motion.div className="sun" style={{ y: yBg }}></motion.div>
+                ? <motion.div className="planets" style={{ y: yBg }} variants={variants}></motion.div>
+                : <motion.div className="sun" style={{ y: yBg }} variants={variants}></motion.div>
             }
-            <motion.div className="stars" style={{ x: yBg }}>
+            <motion.div className="stars" style={{ x: yBg }} variants={variants}>
 
             </motion.div>
 
-        </div>
+        </motion.div>
     )
 }
 
