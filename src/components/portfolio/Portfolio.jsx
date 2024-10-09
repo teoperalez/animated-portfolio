@@ -36,18 +36,21 @@ const portfolioItems = [
 const PortfolioItem = ({ portfolioItem }) => {
     const itemRef = useRef()
 
-    const { scrollYProgress } = useScroll({ target: itemRef })
+    const { scrollYProgress } = useScroll({ 
+        target: itemRef,
+        // offset: ["start start", "end end"] 
+    })
 
-    const y = useTransform(scrollYProgress, [0, 1], [-300, 300])
+    const y = useTransform(scrollYProgress, [0, 1], [0, 0])
 
     return (
-        <section ref={itemRef}>
+        <section>
             <div className="container">
                 <div className="wrapper">
-                    <div className="imageContainer">
+                    <div className="imageContainer"  ref={itemRef}>
                         <img src={portfolioItem.img} alt="portfolioItem.title" />
                     </div>
-                    <motion.div className="textContainer" >
+                    <motion.div className="textContainer" style={{y}} >
                         <h2>{portfolioItem.title}</h2>
 
                         <p>{portfolioItem.description}</p>
