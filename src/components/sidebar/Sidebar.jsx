@@ -35,6 +35,7 @@ const Sidebar = () => {
                 <Links />
             </motion.div>
             <ToggleButton setOpen={setOpen}/>
+            {open && <button className="transparent" onClick={()=>setOpen(false)}></button>}
 
         </motion.div>
           

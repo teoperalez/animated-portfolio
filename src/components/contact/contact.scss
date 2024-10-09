@@ -1,0 +1,113 @@
+.contact {
+    display: flex;
+    max-width: 1366px;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    align-items: center;
+    gap: 50px;
+
+    .textContainer {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        h1 {
+            font-size: 80px;
+            color: orange;
+            line-height: 70px;
+        }
+
+        .contactItem {
+
+            h2 {
+                font-size: 30px;
+            }
+
+            span {
+                font-size: 20px;
+                font-weight: 100;
+            }
+
+        }
+    }
+
+    .formContainer {
+        flex: 1;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        .phoneSVG {
+            position: absolute;
+            
+            display: flex;
+            margin: auto;
+            stroke: orange;
+            opacity: 0;
+            z-index: 1;
+            
+            
+        }
+
+        form {
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+
+            .inputContainer {
+                position: relative;
+
+
+
+                input {
+                    width: 100%;
+                    padding: 20px;
+                    background-color: transparent;
+
+                    border: solid 1px white;
+                    border-radius: 10px;
+                    color: white !important;
+
+                    font-size: 20px;
+
+                }
+
+
+                textarea {
+                    width: 100%;
+                    height: 250px;
+                    padding: 20px;
+                    background-color: transparent;
+                    border: solid 1px white;
+                    border-radius: 10px;
+                    color: white;
+                    font-size: 20px;
+                }
+
+
+            }
+
+            button {
+                background-color: orange;
+                padding: 20px;
+                color: black;
+                font-size: 30px;
+                font-weight: 800;
+                border-radius: 10px;
+                cursor: pointer;
+
+            }
+
+
+        }
+    }
+
+
+
+}

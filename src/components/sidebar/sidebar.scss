@@ -6,6 +6,7 @@
     background-color: white;
     color: black;
 
+    
 
 
     .bg {
@@ -47,4 +48,17 @@
         cursor: pointer;
 
     }
+    .transparent {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        left: 400px;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: transparent;
+        z-index: 1;
+    }
+
 }
