@@ -1,5 +1,3 @@
-"use client"
-import { useState } from "react"
 import "./services.scss"
 import { motion } from "framer-motion"
 
@@ -22,7 +20,6 @@ const variants = {
 }
 
 const Services = () => {
-    const [showCards,setShowCards] = useState(false)
     
     return (
         <motion.div className="services" variants={variants} initial="initial" whileInView="animate">
@@ -40,12 +37,12 @@ const Services = () => {
                 </motion.div>
                 <motion.div className="title">
                     <motion.h1><motion.b whileHover={{color: "orange"}}>For Your</motion.b> Business.</motion.h1>
-                    <motion.button onClick={() => setShowCards((prev) => !prev)}>WHAT I DO</motion.button>
+                    <motion.button>WHAT I DO</motion.button>
 
                 </motion.div>
 
             </motion.div>
-            {showCards && <motion.div className="listContainer" variants={variants}> 
+            <motion.div className="listContainer" variants={variants}> 
                 <motion.div className="card" whileHover={{ background: "lightgrey", color:"black"}}>
                     <div className="cardTitle">Frontend Development</div>
                     <div className="cardDescription">From blogs to ecommerce to live animated overlays,
@@ -75,7 +72,7 @@ const Services = () => {
                 
 
 
-            </motion.div>}
+            </motion.div>
 
         </motion.div>
     )
