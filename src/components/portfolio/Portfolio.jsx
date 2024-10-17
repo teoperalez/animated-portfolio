@@ -22,7 +22,7 @@ const portfolioItems = [
         title: "Think. Trade/ Profit. Technical Indicator Blog & E-commerce",
         img: "/portfolio/Think_Trade_Profit.png",
         description: "Built on a MERN stack and ChartJS, this app provides detailed analysis of technical trading indicators dunamically by allowing users to set specific entry and exit rules and seee in real-time backtested results on their favorite stocks, cryptos, and forex pairs.  It also ranks technical indicators daily based on recent performance and trades generated on the SP500.   Users can add their favorite indicators to their profile, sign-up for paid subscriptions to get daily updates of technical signals based on their saved indicators, and purchase custome indicator scripts for use on their favrite trading platforms",
-        link: "thinktradeprofit.com"
+        link: "https://thinktradeprofit.com"
     },
     {
         id: 4,
