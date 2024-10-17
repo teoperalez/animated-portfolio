@@ -40,7 +40,7 @@ const Services = () => {
                 </motion.div>
                 <motion.div className="title">
                     <motion.h1><motion.b whileHover={{color: "orange"}}>For Your</motion.b> Business.</motion.h1>
-                    <motion.button onClick={setShowCards((prev) => !prev)}>WHAT I DO</motion.button>
+                    <motion.button onClick={() => setShowCards((prev) => !prev)}>WHAT I DO</motion.button>
 
                 </motion.div>
 
