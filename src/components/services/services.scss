@@ -91,7 +91,7 @@
 
         .card {
             height: 90%;
-            width: 20%;
+            
             border-radius: 10px;
             display: flex;
             flex-direction: column;
@@ -102,13 +102,13 @@
                        
             
             .cardTitle {
-                font-size: 18px;
+                font-size: 20px;
                 font-weight: 400;
 
             }
             .cardDescription {
                 line-break: 65ch;
-                font-size: 10px;
+                font-size: 14px;
             }
 
             .cardButton {
