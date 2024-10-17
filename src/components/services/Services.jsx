@@ -1,3 +1,5 @@
+"use client"
+import { useState } from "react"
 import "./services.scss"
 import { motion } from "framer-motion"
 
@@ -20,6 +22,8 @@ const variants = {
 }
 
 const Services = () => {
+    const [showCards,setShowCards] = useState(false)
+    
     return (
         <motion.div className="services" variants={variants} initial="initial" whileInView="animate">
             <motion.div className="textContainer" variants={variants}>
@@ -36,19 +40,19 @@ const Services = () => {
                 </motion.div>
                 <motion.div className="title">
                     <motion.h1><motion.b whileHover={{color: "orange"}}>For Your</motion.b> Business.</motion.h1>
-                    <motion.button>WHAT I DO</motion.button>
+                    <motion.button onClick={setShowCards((prev) => !prev)}>WHAT I DO</motion.button>
 
                 </motion.div>
 
             </motion.div>
-            <motion.div className="listContainer" variants={variants}> 
+            {showCards && <motion.div className="listContainer" variants={variants}> 
                 <motion.div className="card" whileHover={{ background: "lightgrey", color:"black"}}>
                     <div className="cardTitle">Frontend Development</div>
                     <div className="cardDescription">From blogs to ecommerce to live animated overlays,
                         I utilize my knowledge of frontend frameworks VueJS and ReactJS
                         together with NodeJS to create stunning, reponsive, and intuitive web
                         tools to pull in clients and build your business! </div>
-                    <div className="cardButton"><p>Learn More </p> <span>⇒</span></div>
+                    <a className="cardButton" href="#portfolio"><p>Learn More </p> <span>⇒</span></a>
                 </motion.div>
                 <motion.div className="card" whileHover={{ background: "lightgrey", color:"black"}}>
                     <div className="cardTitle">Content Creation</div>
@@ -57,7 +61,7 @@ const Services = () => {
                         builds excitement and awareness around your brand, but also converts those
                         social media engagements into consistent advertising revenue, subscriptions, and product sales.
                     </div>
-                    <div className="cardButton"><p>Learn More </p> <span>⇒</span></div>
+                    <a className="cardButton" href="#portfolio"><p>Learn More </p> <span>⇒</span></a>
                 </motion.div>
                 <motion.div className="card" whileHover={{ background: "lightgrey", color:"black"}}>
                     <div className="cardTitle">Video Editing</div>
@@ -66,12 +70,12 @@ const Services = () => {
                         convert viewers into subscribers and patrons, and lead to positive ROI 
                         on product placements and branded content.   
                     </div>
-                    <div className="cardButton"><p>Learn More </p> <span>⇒</span></div>
+                    <a className="cardButton" href="#portfolio"><p>Learn More </p> <span>⇒</span></a>
                 </motion.div>
                 
 
 
-            </motion.div>
+            </motion.div>}
 
         </motion.div>
     )
