@@ -68,16 +68,7 @@ const Services = () => {
                     </div>
                     <div className="cardButton"><p>Learn More </p> <span>⇒</span></div>
                 </motion.div>
-                <motion.div className="card" whileHover={{ background: "lightgrey", color:"black"}}>
-                    <div className="cardTitle">Graphic Design</div>
-                    <div className="cardDescription">
-                        From Youtube thumbnails to website hero images, let me 
-                        add that extra layer of appeal to your business that will 
-                        not only improve the appearance of your brand, but also build 
-                        lasting impressions on your clients.   
-                    </div>
-                    <div className="cardButton"><p>Learn More </p> <span>⇒</span></div>
-                </motion.div>
+                
 
 
             </motion.div>
